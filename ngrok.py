@@ -16,7 +16,7 @@ class conBd():
 
 app = Flask(__name__)
 run_with_ngrok(app)
-route = {'host': 'localhost', 'user': 'root', 'password': 'jPql18ght5z@', 'database': 'bd'}
+route = {'host': 'localhost', 'user': 'root', 'password': 'senha', 'database': 'bd'}
 database_name = route['database']
 
 @app.route('/addrow', methods = ['GET'])
@@ -143,9 +143,9 @@ def readRow():
 def select():
     global route
     connection = conBd(**route)
-    connection.cursor.execute(f"SELECT CO_IES, COUNT(*) as QNT_DE_ALUNOS FROM ies NATURAL JOIN aluno GROUP BY CO_IES HAVING COUNT(*) > 100")
+    connection.cursor.execute(f"SELECT CO_IES, NO_IES, COUNT(*) as QNT_DE_ALUNOS FROM ies NATURAL JOIN aluno GROUP BY CO_IES")
     result = connection.cursor.fetchall()
-    output = [{'CO_IES': i[0], 'QNT_DE_ALUNOS': i[1]} for i in result]
+    output = [{'CO_IES': i[0], 'NO_IES': i[1], 'QNT_DE_ALUNOS': i[2]} for i in result]
     return jsonify(output)
 
 @app.route('/procedure', methods = ['GET'])
@@ -155,7 +155,7 @@ def procedure():
     num_ies = request.args.get('CO_IES')
     connection.cursor.execute(f"CALL ver_qtd_aluno({num_ies})")
     result = connection.cursor.fetchall()
-    output = [{'CO_IES': i[0], 'QNT_DE_ALUNOS': i[1]} for i in result]
+    output = [{'CO_IES': i[0], 'QNT_DE_CURSOS': i[1]} for i in result]
     return jsonify(output)
 
 app.run()

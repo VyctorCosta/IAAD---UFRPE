@@ -7,7 +7,7 @@ df_curso = pd.read_csv('./dados/curso.csv')
 df_ies = pd.read_csv('./dados/ies.csv')
 df_aluno = pd.read_csv('./dados/aluno.csv')
 df_aluno['NU_DATA_NASCIMENTO'] = df_aluno['NU_DATA_NASCIMENTO'].astype('datetime64')
-route = {'host': 'localhost', 'user': 'root', 'password': 'jPql18ght5z@', 'database': 'bd'}
+route = {'host': 'localhost', 'user': 'root', 'password': 'senha', 'database': 'bd'}
 
 ies = Table(**route, table_name='ies')
 curso = Table(**route, table_name='curso')
