@@ -1,11 +1,13 @@
 import pandas as pd
+import random as r
+r.seed('7326362')
 from classes_bd import *
 
 df_curso = pd.read_csv('./dados/curso.csv')
 df_ies = pd.read_csv('./dados/ies.csv')
 df_aluno = pd.read_csv('./dados/aluno.csv')
 df_aluno['NU_DATA_NASCIMENTO'] = df_aluno['NU_DATA_NASCIMENTO'].astype('datetime64')
-route = {'host': 'localhost', 'user': 'root', 'password': '', 'database': 'teste'}
+route = {'host': 'localhost', 'user': 'root', 'password': 'jPql18ght5z@', 'database': 'bd'}
 
 ies = Table(**route, table_name='ies')
 curso = Table(**route, table_name='curso')
@@ -20,10 +22,15 @@ aluno.addPrimaryKey('ID_ALUNO', 'CO_IES', 'CO_CURSO')
 aluno.addForeignKey('CO_IES', 'CO_IES', 'curso')
 aluno.addForeignKey('CO_CURSO', 'CO_CURSO', 'curso')
 
-for i in range(20):
+for i in range(500):
     ies.addRow(df_ies.iloc[i].values)
+for i in range(486):
     curso.addRow(df_curso.iloc[i].values)
+for i in range(500):
     aluno.addRow(df_aluno.iloc[i].values)
+
+aluno.createTrigger()
+aluno.createProcedure()
 ies.closeCon()
 curso.closeCon()
 aluno.closeCon()

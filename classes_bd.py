@@ -23,7 +23,7 @@ class Table(conBd):
             elif dataframe.dtypes[i] == 'float64':
                 df_type = 'FLOAT(3,1)'
             elif dataframe.dtypes[i] == 'object':
-                df_type = 'VARCHAR(40)'
+                df_type = 'VARCHAR(100)'
             elif dataframe.dtypes[i] == 'bool':
                 df_type = 'BOOLEAN'
             elif dataframe.dtypes[i] == 'datetime64[ns]':
@@ -50,6 +50,13 @@ class Table(conBd):
     
     def addForeignKey(self, foreignkey, primarykey, referenceTable):
         self.cursor.execute(f'ALTER TABLE {self.table_name} ADD FOREIGN KEY ({foreignkey}) REFERENCES {referenceTable}({primarykey})')
+
+    def createTrigger(self):
+        self.cursor.execute(f"CREATE TRIGGER inc_qtd_matricula AFTER INSERT ON aluno FOR EACH ROW UPDATE curso SET QT_MATRICULA_TOTAL = (QT_MATRICULA_TOTAL + 1) WHERE co_curso = NEW.co_curso;")
+
+    def createProcedure(self):
+        self.cursor.execute(f"CREATE PROCEDURE ver_qtd_aluno (codigo_ies INT) SELECT CO_IES, COUNT(*) as QNT_DE_CURSOS FROM ies NATURAL JOIN curso WHERE CO_IES = codigo_ies GROUP BY CO_IES")
+    
 
     #------------------ Processo CRUD ---------------------------
     # parameters = [atributos de cada coluna em ordem separado por virgula] Ex: ['1', 'UNIVERSIDADE FEDERAL DE MATO GROSSO', 'UFMT', 'Pública Federal', 'Universidade', 'Centro-Oeste']

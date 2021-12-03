@@ -388,7 +388,7 @@ CO_IES,NO_IES,SG_IES,TP_CATEGORIA_ADMINISTRATIVA,TP_ORGANIZACAO_ACADEMICA,REGIAO
 1426,INSTITUTO LUTERANO DE ENSINO SUPERIOR DE ITUMBIARA,ILES,Privada sem fins lucrativos,Faculdade,Centro-Oeste
 451,CENTRO UNIVERSITÁRIO LUTERANO DE SANTARÉM,CEULS,Privada sem fins lucrativos,Centro Universitário,Norte
 454,FACULDADE CAMAQÜENSE DE CIÊNCIAS CONTÁBEIS E ADMINISTRATIVAS,FACCCA,Privada sem fins lucrativos,Faculdade,Sul
-456,CENTRO UNIVERSITÁRIO SANT¿ANNA,UNISANT'ANNA,Privada sem fins lucrativos,Centro Universitário,Sudeste
+456,CENTRO UNIVERSITÁRIO SANT¿ANNA,UNISANTANNA,Privada sem fins lucrativos,Centro Universitário,Sudeste
 461,FACULDADE ARMANDO ALVARES PENTEADO,FA-FAAP,Privada sem fins lucrativos,Faculdade,Sudeste
 466,UNIVERSIDADE ANHEMBI MORUMBI,UAM,Privada com fins lucrativos,Universidade,Sudeste
 2565,ABEU - CENTRO UNIVERSITÁRIO,UNIABEU,Privada sem fins lucrativos,Centro Universitário,Sudeste
@@ -724,7 +724,7 @@ CO_IES,NO_IES,SG_IES,TP_CATEGORIA_ADMINISTRATIVA,TP_ORGANIZACAO_ACADEMICA,REGIAO
 21892,CENTRO DE ENSINO SUPERIOR DE PALMAS,CESUP,Privada sem fins lucrativos,Faculdade,Norte
 1113,CENTRO UNIVERSITÁRIO EURO-AMERICANO,UNIEURO,Privada sem fins lucrativos,Centro Universitário,Centro-Oeste
 1115,FACULDADE SANTA TEREZINHA,CEST,Privada sem fins lucrativos,Faculdade,Nordeste
-738,CENTRO UNIVERSITÁRIO TERESA D'ÁVILA,FATEA,Privada sem fins lucrativos,Centro Universitário,Sudeste
+738,CENTRO UNIVERSITÁRIO TERESA DÁVILA,FATEA,Privada sem fins lucrativos,Centro Universitário,Sudeste
 545,FACULDADE DE DESENVOLVIMENTO DAS CIÊNCIAS E HUMANIDADES,FADECH,Privada sem fins lucrativos,Faculdade,Sudeste
 4938,FACULDADE CLARETIANA DE TEOLOGIA,,Privada sem fins lucrativos,Faculdade,Sul
 135,CENTRO UNIVERSITÁRIO CLARETIANO,CEUCLAR,Privada sem fins lucrativos,Centro Universitário,Sudeste
@@ -2238,7 +2238,7 @@ CO_IES,NO_IES,SG_IES,TP_CATEGORIA_ADMINISTRATIVA,TP_ORGANIZACAO_ACADEMICA,REGIAO
 1619,FACULDADE DE OLÍMPIA,,Privada com fins lucrativos,Faculdade,Sudeste
 416,FACULDADE DE SÃO PAULO,FASP,Privada com fins lucrativos,Faculdade,Sudeste
 779,FACULDADE DE PONTA PORÃ,FAP,Privada com fins lucrativos,Faculdade,Centro-Oeste
-4029,FACULDADE DE SANTA BÁRBARA D'OESTE,FAP,Privada com fins lucrativos,Faculdade,Sudeste
+4029,FACULDADE DE SANTA BÁRBARA DOESTE,FAP,Privada com fins lucrativos,Faculdade,Sudeste
 1581,FACULDADE DE SANTA LUZIA,FACSAL,Privada sem fins lucrativos,Faculdade,Sudeste
 1562,FACULDADE DE ILHA SOLTEIRA,FAISA,Privada sem fins lucrativos,Faculdade,Sudeste
 1545,FACULDADE DE BOITUVA,FIB,Privada sem fins lucrativos,Faculdade,Sudeste
